@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--html manifest="app.manifest"-->
+<html>
+<head>
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<META name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Atacand & Atacand Plus</title>
+<link href="../css/style.css" type="text/css" rel="stylesheet">
+<link href="../css/reset.css" type="text/css" rel="stylesheet">
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/jquery-ui-1.10.2.custom.min.js"></script>
+<script type="text/javascript" src="js/vidWithPoster.js"></script>
+<script src="../js/main.js"></script>
+</head>	
+<body>
+<div id="page_base">
+  <div class="mainbg">
+    <div class="normal_bg">
+    <div class="header_bg"></div>
+    <div class="header_title1"></div>
+    <video id="basicVideo" src="../media/KOL.m4v" preload controls width="100%" height="100%"></video>
+    <div class="footer_bg"></div>
+    </div>
+  </div>
+</div>
+<script>
+function gotFocus() {
+document.getElementById('basicVideo').play();
+}
+
+function lostFocus() {
+document.getElementById('basicVideo').pause();
+//			posterVidControl.resetVideo();
+    callLostFocus();
+}
+</script>
+</body>
